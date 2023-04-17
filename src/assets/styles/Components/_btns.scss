@@ -1,0 +1,30 @@
+.btn {
+  padding: 8px 64px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.5s;
+
+  &.btn-primary {
+    border: 1px solid $main-primary;
+    background-color: $main-primary;
+    color: $main-white;
+    letter-spacing: 1px;
+
+    &:hover {
+      background-color: $main-white;
+      color: $main-primary;
+    }
+  }
+
+  &.btn-secundary {
+    border: 1px solid $main-primary;
+    background-color: transparent;
+    color: $main-primary;
+    letter-spacing: 1px;
+
+    &:hover {
+      color: #f0f0f0;
+      background-color: $main-primary;
+    }
+  }
+}

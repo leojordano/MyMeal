@@ -1,0 +1,131 @@
+@import '../../assets/styles/main.scss';
+
+.sidebar {
+  background-color: $main-primary;
+  max-width: 280px;
+  width: 280px;
+  height: 100%;
+  padding: 24px 0px;
+  position: relative;
+  transition: max-width 0.5s;
+  @include useFlexbox(start, center, column);
+
+  &.open {
+    max-width: 50px;
+    @include useFlexbox(center, center, column);
+
+    .hide {
+      opacity: 0;
+    }
+
+    ul {
+      position: relative;
+      left: 2px;
+    }
+  }
+
+  .hide {
+    transition: all 0.3s;
+    transition-delay: 0.5s;
+    opacity: 1;
+  }
+
+  .divider {
+    height: 95%;
+    width: 3px;
+    background-color: $main-primary;
+    position: absolute;
+    right: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .arrow-icon {
+      background-color: $main-white;
+      padding: 10px;
+      border-radius: 100%;
+      z-index: 10;
+      color: $main-primary;
+      border: 2px solid $main-primary;
+      cursor: pointer;
+      @include useFlexbox(center, center, column);
+      transition: all 0.3s;
+
+      &.active {
+        transform: rotate(180deg);
+      }
+
+      &:hover {
+        transform: scale(1.1);
+
+        &.active {
+          transform: rotate(180deg) scale(1.1);
+        }
+      }
+    }
+  }
+
+  h3 {
+    color: $main-white;
+    text-align: center;
+  }
+
+  .user-data {
+    margin-top: 30px;
+    @include useFlexbox(center, center, column);
+    color: $main-white;
+
+    img {
+      max-width: 60px;
+      border-radius: 100%;
+    }
+
+    span {
+      margin-top: 5px;
+    }
+  }
+
+  hr {
+    margin: 30px 0px;
+  }
+
+  ul {
+    width: 90%;
+    position: relative;
+    left: 12px;
+
+    li {
+      margin-bottom: 5px;
+      text-align: center;
+      font-size: 18px;
+      padding: 10px;
+      position: relative;
+      left: 0px;
+      border-radius: 18px 0px 0px 18px;
+
+      a {
+        color: $main-white;
+        @include useFlexbox(start);
+        position: relative;
+        left: 0px;
+        gap: 10px;
+        transition: all 0.3s;
+      }
+
+      &:hover,
+      &.active {
+        background-color: $main-white;
+        transition: all 0.3s;
+
+        a {
+          color: $main-primary;
+          left: 10px;
+        }
+      }
+    }
+  }
+
+  .exit {
+    justify-self: end;
+  }
+}

@@ -1,0 +1,32 @@
+$sizes: (
+  '100': 100%,
+  'full': 100vw
+);
+
+@each $name, $size in $sizes {
+  // Width
+  .w-#{$name} {
+    width: $size;
+  }
+
+  .max-w-#{$name} {
+    max-width: $size;
+  }
+
+  .min-w-#{$name} {
+    min-width: $size;
+  }
+
+  // HEIGHT
+  .h-#{$name} {
+    height: $size;
+  }
+
+  .max-h-#{$name} {
+    max-height: $size;
+  }
+
+  .min-h-#{$name} {
+    min-height: $size;
+  }
+}

@@ -1,0 +1,13 @@
+@import '../assets/styles/main.scss';
+
+#dashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  gap: 40px;
+
+  .content {
+    max-width: 90%;
+  }
+}
